@@ -1,4 +1,4 @@
-package com.sda;
+package com.sda.encapsulation;
 
 public class Main {
 
@@ -26,5 +26,12 @@ public class Main {
         car.setWheels(6);
         int wheels = car.getWheels();
         System.out.println("Numarul de roti este: " + wheels);
+
+        Dog dog = new Dog("Male", "Doberman");
+        dog.showDog();
+
+        dog.setAge(10);
+        dog.setWeight(20);
+        dog.showDog();
     }
 }
