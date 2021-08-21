@@ -75,6 +75,13 @@ public class Main {
             }
         };
 
+        // ASA DA
+        Angajat angajat100 = new Contabil("popescu", "ion");
+
+
+        // ASA NU
+//        Contabil contabil100 = new Angajat("mihail", "dan");
+
 
 
 

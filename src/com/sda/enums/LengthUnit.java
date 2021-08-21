@@ -17,3 +17,9 @@ public enum LengthUnit {
         return this.value;
     }
 }
+
+enum LenghtUnitV2 {
+    METER,
+    INCH;
+
+}

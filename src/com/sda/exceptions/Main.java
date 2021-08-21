@@ -30,6 +30,9 @@ public class Main {
 
         try {
             int a = 10/ 0;
+
+            // daca apare exceptia codul merge direct pe catch!!!
+            System.out.println("Test");
         } catch (IndexOutOfBoundsException | ArithmeticException exception) {
             System.out.println("here is something strange");
         }
@@ -66,8 +69,10 @@ public class Main {
 
     }
 
+    // throws -> Ii spune programatorului ca aceasta metoda va arunca o exceptie de tipul Exception!!!
     private static void printArrayElement(int[] intArray, int index) throws Exception {
         if (index < 0 || index >= intArray.length) {
+            // throw new Exception() -> asa aruncam programatic o execeptie!!!
             throw new Exception("Incorrect argument!");
         }
         System.out.println(intArray[index]);
