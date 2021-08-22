@@ -122,6 +122,7 @@ public class Main {
         hashMap.put("dulap", "spatiu de depozitare din lemn");
         hashMap.put("laptop", "mini calculator, portabil");
         hashMap.put("telefon", "dispozitiv de comunicare");
+        hashMap.put("birou", "loc pentru calculator");
 
         // putIfAbsent -> adauga elemetul doar daca nu este key-ul deja in map
         hashMap.putIfAbsent("birou", "spatiu de lucru");
@@ -137,7 +138,7 @@ public class Main {
         hashMap.remove("dulap");
 
         // clear -> sterge toate elementele din map
-        hashMap.clear();
+//        hashMap.clear();
 
         // containsKey -> verifica daca este prezent key-ul in map
         boolean isPresentKey = hashMap.containsKey("laptop");
@@ -149,7 +150,29 @@ public class Main {
         for(Map.Entry<String, String> entry : hashMap.entrySet()) {
             // getKey() -> returneaza key-ul
             // getValue() -> returneaza value
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+
+        // de regula cand dorim sa adaugam un element in Map, verificam daca acesta este
+        // deja prezent, daca nu, il adaugam, daca e prezent il suprascriem SAU concatenem
+        // valoarea initiala cu noua valoare
+        if(hashMap.containsKey("telefon")) {
+            String oldValue = hashMap.get("telefon");
+            String newValue = "dispozitiv pentru navigare pe internet";
+
+            hashMap.put("telefon", oldValue + ", " + newValue);
+        }
+
+        // daca adaugam o cheie care este deja prezenta in map
+        // valoarea initiala este suprascrisa de valoarea noua
+//        hashMap.put("telefon", "dispozitiv pentru navigare pe internet");
+
+        System.out.println("-------------");
+
+        for(Map.Entry<String, String> entry : hashMap.entrySet()) {
+            // getKey() -> returneaza key-ul
+            // getValue() -> returneaza value
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
         Map<String, String> linkedHashMap = new LinkedHashMap<>();
