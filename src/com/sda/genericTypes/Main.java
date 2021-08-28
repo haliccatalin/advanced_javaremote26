@@ -33,10 +33,10 @@ public class Main {
     }
 
     public static void genericTypesLimitedSample() {
-        Pitbul rexPitbul = new Pitbul("rex", 2);
+        Pitbull rexPitbull = new Pitbull("rex", 2);
 
-        GenericBoxLimited<Pitbul> stringGenericBoxLimited =
-                new GenericBoxLimited<Pitbul>(rexPitbul);
+        GenericBoxLimited<Pitbull> stringGenericBoxLimited =
+                new GenericBoxLimited<Pitbull>(rexPitbull);
     }
 
 

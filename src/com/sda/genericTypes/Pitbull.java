@@ -1,10 +1,10 @@
 package com.sda.genericTypes;
 
-public class Pitbul extends Dog {
+public class Pitbull extends Dog {
 
     private int age;
 
-    public Pitbul(String name, int age) {
+    public Pitbull(String name, int age) {
         super(name);
 
         this.age = age;
